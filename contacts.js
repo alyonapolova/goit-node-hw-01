@@ -35,7 +35,7 @@ async function removeContact(contactId) {
   if (index === -1) {
     return null;
   }
-  const result = list.splice(index, 1);
+  const [result] = list.splice(index, 1);
   await writeFileDb(list);
   return result;
 }
